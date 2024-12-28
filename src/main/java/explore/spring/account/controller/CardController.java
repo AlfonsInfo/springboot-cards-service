@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
 @Validated
 @Tag(name = "CRUD REST APIs for Cards", description = "CREATE, READ, UPDATE, DELETE")
 public class CardController {
-
     private final CardService cardService;
 
     @Operation(summary = "Create Cards")
@@ -78,6 +77,4 @@ public class CardController {
                 .statusMsg(StatusMessage.SUCCESS_DELETE_CARDS)
                 .build();
     }
-
-
 }
