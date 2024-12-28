@@ -9,14 +9,14 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Loans extends BaseEntity{
+public class Card extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long loanId;
+    private Long cardId;
     private String mobileNumber;
-    private String loanNumber;
-    private String loanType;
-    private int totalLoan;
-    private int amountPaid;
-    private int outstandingAmount;
+    private String cardNumber;
+    private String cardType;
+    private int totalLimit;
+    private int amountUsed;
+    private int availableAmount;
 }

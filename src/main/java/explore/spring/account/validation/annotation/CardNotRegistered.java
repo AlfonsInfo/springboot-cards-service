@@ -1,7 +1,7 @@
 package explore.spring.account.validation.annotation;
 
 
-import explore.spring.account.validation.validator.LoansIsExistValidator;
+import explore.spring.account.validation.validator.CardNotRegisteredValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
@@ -14,10 +14,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = LoansIsExistValidator.class)
+@Constraint(validatedBy = CardNotRegisteredValidator.class)
 @Target({ FIELD,  PARAMETER, TYPE})
-public @interface LoansIsExist {
-    String message() default "Loan is not found";
+public @interface CardNotRegistered {
+    String message() default "Card already exists and cannot be registered again";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
 }
